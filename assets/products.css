@@ -1,12 +1,17 @@
 .main{
-    width: 25%;
-    margin-left: 20%;
-    margin-top: 3%;
+    width: 85%;
+    margin-top: 10%;
     border-radius: 15%;
+}
+.content{
+    margin-top: 10%;
+
+}
+.content h1{
+    font-size: 2rem;
 }
 @media only screen and (max-width:1200px){
     .main{
-        width: 100%;
         margin-left: auto;
         
     }
