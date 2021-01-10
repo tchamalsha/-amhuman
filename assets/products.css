@@ -1,3 +1,13 @@
+#brand{
+    font-size: 2rem;
+    font-weight: bold;
+}
+#m{
+    color: red;
+}
+.navbar-brand{
+    margin-left: 3%;
+}
 .main{
     width: 85%;
     margin-top: 10%;
@@ -9,10 +19,82 @@
 }
 .content h1{
     font-size: 2rem;
+    font-family: 'Fraunces', serif;
+}
+#price{
+    font-size: 1.2rem;
+    color: gray;
+    font-weight: bold;
+}
+.small{
+    padding: 2%;
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+.medium{
+    padding: 2%;
+}
+.large{
+    padding: 2%;
+}
+.xl{
+    padding: 2%;
+}
+#size{
+    font-size: 1.1rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+}
+.color .btn-color1{
+    background-color: black;
+}
+.color .btn-color2{
+    background-color: white;
+}
+.color .btn-color3{
+    background-color: darkred;
+}
+.color button {
+        border-color: black;
+        color: white;
+        padding: 20px;
+        display: inline-block;
+        border-radius: 50%;
+        font-size: 16px;
+        margin: 4px 2px;
+ }
+
+input[type=text] 
+{
+    width: 10%;
+
+}
+.qty{
+    padding-top: 3%;
+}
+.payments{
+    padding-top: 3%;
+    font-size: 1.1rem;
+    font-family: 'Oxygen', sans-serif;
+}
+#payment{
+    font-weight: bold;
+}
+.buy{
+    padding-top: 6%
+}
+.buy button{
+    background-color: gray;
+    color: white;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-color: gray;
 }
 @media only screen and (max-width:1200px){
     .main{
-        margin-left: auto;
+  
         
     }
 }

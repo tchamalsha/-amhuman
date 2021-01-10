@@ -5,19 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="assets/products.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,700&family=Oxygen&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
     </head>
     <body>
         <nav class="navbar navbar-light bg-light justify-content-between">
-            <a class="navbar-brand">am human</a>
+            <a class="navbar-brand"><p id="brand">'am human</p></a>
             <form class="form-inline">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-hand-o-left" aria-hidden="true"></i> Go back</button>
             </form>
           </nav>
           <div class="container">
             <div class="row">
-              <div class="col">
+              <div class="col-lg-6">
                 <div class="main">
                   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                       <ol class="carousel-indicators">
@@ -26,10 +29,10 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                       </ol>
                       <div class="carousel-inner">
-                        <div class="carousel-item ">
-                          <img class="d-block w-100" src="assets/img/PER_3150.jpg" alt="First slide">
-                        </div>
                         <div class="carousel-item active">
+                          <img class="d-block w-100" src="assets/img/PO033244.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item ">
                           <img class="d-block w-100" src="assets/img/PER_3144.jpg" alt="Second slide">
                         </div>
                         <div class="carousel-item">
@@ -47,9 +50,40 @@
                     </div>
                   </div>  
               </div>
-              <div class="col">
+              <div class="col-lg-6">
                 <div class="content">
                   <h1>Men's crew neck t-shirt</h1>
+                  <br>
+                  <div class="pricing">
+                    <p id="price">Rs.1300.00 </p>
+                    <p id="size">Size</p>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <div class="small"><button type="button" class="btn btn-secondary">S</button></div>
+                      <div class="medium"><button type="button" class="btn btn-secondary">M</button></div>
+                      <div class="large"><button type="button" class="btn btn-secondary">L</button></div>
+                      <div class="xl"><button type="button" class="btn btn-secondary">XL</button></div>
+                    </div>
+                  </div>
+                <br>
+                <div class="color"> 
+                  <p id="size">Color</p>
+                  <button type="button" class="btn btn-color1"></button>
+                  <button type="button" class="btn btn-color2"></button>
+                  <button type="button" class="btn btn-color3"></button>
+                </div>
+                <div class="qty">
+                  <p id="size">Qty</p>
+                  <input type="text" value="1">
+                </div>
+                <div class="payments">
+                  <p id="payment">Payment options</p>
+                  <input type="radio" id="COD" name="payment" value="COD">
+                  <label for="male">Cash on delivery</label><br>
+                  <input type="radio" id="visa" name="payment" value="visa">
+                  <label for="female">Visa card</label><br>
+                </div>
+                <div class="buy">
+                  <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Buy now</button>
                 </div>
               </div>
             </div>
