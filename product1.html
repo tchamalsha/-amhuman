@@ -65,38 +65,83 @@
               </div>
               <div class="col-lg-6">
                 <div class="content">
-                  <h1>Men's crew neck t-shirt</h1>
-                  <br>
-                  <div class="pricing">
-                    <p id="price">Rs.1300.00 </p>
-                    <p id="size">Size</p>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <div class="small"><button type="button" class="btn btn-secondary">S</button></div>
-                      <div class="medium"><button type="button" class="btn btn-secondary">M</button></div>
-                      <div class="large"><button type="button" class="btn btn-secondary">L</button></div>
-                      <div class="xl"><button type="button" class="btn btn-secondary">XL</button></div>
+                  <form id="customer-details">
+                      <h1>Men's crew neck t-shirt</h1>
+                      <br>
+                      <div class="pricing">
+                        <p id="price">Rs.1300.00 </p>
+                      </div>
+                      <div class="sizing">
+                        <p id="size">Size</p>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <div class="small"><button type="button" class="btn btn-secondary">S</button></div>
+                          <div class="medium"><button type="button" class="btn btn-secondary">M</button></div>
+                          <div class="large"><button type="button" class="btn btn-secondary">L</button></div>
+                          <div class="xl"><button type="button" class="btn btn-secondary">XL</button></div>
+                        </div>
+                      </div>
+                      <br>
+                    <div class="color"> 
+                      <p id="size">Color</p>
+                      <button type="button" class="btn btn-color1"></button>
+                      <button type="button" class="btn btn-color2"></button>
+                      <button type="button" class="btn btn-color3"></button>
                     </div>
-                  </div>
-                  <br>
-                <div class="color"> 
-                  <p id="size">Color</p>
-                  <button type="button" class="btn btn-color1"></button>
-                  <button type="button" class="btn btn-color2"></button>
-                  <button type="button" class="btn btn-color3"></button>
-                </div>
-                <div class="qty">
-                  <p id="size">Qty</p>
-                  <input type="text" value="1">
-                </div>
-                <div class="payments">
-                  <p id="payment">Payment options</p>
-                  <input type="radio" id="COD" name="payment" value="COD">
-                  <label for="male">Cash on delivery</label><br>
-                  <input type="radio" id="visa" name="payment" value="visa">
-                  <label for="female">Visa card</label><br>
-                </div>
-                <div class="buy">
-                  <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Buy now</button>
+                    <div class="qty">
+                      <p id="size">Qty</p>
+                      <input type="text" value="1">
+                    </div>
+                    <div class="payments">
+                      <p id="payment">Payment options</p>
+                      <input type="radio" id="COD" name="payment" value="COD">
+                      <label for="male">Cash on delivery</label><br>
+                      <input type="radio" id="visa" name="payment" value="visa">
+                      <label for="female">Visa card</label><br>
+                    </div>
+                    <div class="buy">
+                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Buy now</button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Delivery Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>        
+                                <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter name"> 
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Address</label>
+                                <textarea class="form-control" id="inputAddress" rows="3" placeholder="Enter Address"></textarea>
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">District</label>
+                                <input type="email" class="form-control" id="inputDistrict" aria-describedby="emailHelp" placeholder="Enter District">
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Contact number</label>
+                                <input type="email" class="form-control" id="inputNumber" aria-describedby="emailHelp" placeholder="Enter Contact number">
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                              </div>
+                             
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Confirm Order</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
