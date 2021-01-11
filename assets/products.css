@@ -92,6 +92,12 @@ input[type=text]
     font-weight: bold;
     border-color: gray;
 }
+button[id="goback"]{
+    background-color: gray;
+    color: white;
+    border-color: gray;
+
+}
 @media only screen and (max-width:1200px){
     .main{
   
