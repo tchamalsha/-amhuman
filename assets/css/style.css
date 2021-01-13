@@ -373,18 +373,26 @@ section {
 # About
 --------------------------------------------------------------*/
 .about .content h3 {
+  padding-top: 5%;
   font-weight: 700;
+  text-align: center;
   font-size: 26px;
   color: #728394;
 }
 
 .about .content ul {
   list-style: none;
+  text-align: center;
   padding: 0;
 }
-
+#vision{
+  text-align: justify;
+  padding-left: 15%;
+  padding-right: 15%
+}
 .about .content ul li {
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .about .content ul i {
