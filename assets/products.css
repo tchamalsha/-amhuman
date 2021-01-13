@@ -54,8 +54,9 @@
     font-family: 'Oxygen', sans-serif;
     font-weight: bold;
 }
-.form-check input[type=radio]{
-    margin: 1px;
+.sizing input[type=radio]{
+   margin-top: 1px;
+   
 }
 .color .btn-color1{
     background-color: black;
@@ -74,9 +75,8 @@
         display: inline-block;
         border-radius: 50%;
         font-size: 16px;
-        margin: 4px 2px;
- }
-
+        margin: 4px
+}  
 .qty input[type=text] 
 {
     width: 10%;
