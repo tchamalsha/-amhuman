@@ -40,9 +40,12 @@ let form=document.querySelector("#customer-details");
 form.addEventListener('submit', (e) =>{
 	e.preventDefault();
 	let size=form.exampleRadios.value
+	let color=form.color.value
+	let qty=form.qty.value
+	let deliveryMethod=form.payment.value
 	let name = form.inputName.value
 	let address = form.inputAddress.value
 	let district = form.inputDistrict.value
     let number = form.inputNumber.value
-
+    console.log(size,color,name,district)
 })
