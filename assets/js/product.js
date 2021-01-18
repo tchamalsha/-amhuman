@@ -19,6 +19,7 @@ buttonL.addEventListener('click',(e)=>{
 buttonXL.addEventListener('click',(e)=>{
 	radioXL.click()
 })
+
 //color selection
 let buttonBlack = document.getElementById('blackButton')
 let buttonWhite = document.getElementById('whiteButton')
@@ -68,10 +69,15 @@ form.addEventListener('submit', (e) =>{
 	let district = form.inputDistrict.value
 	let number = form.inputNumber.value
 
+	//get date
+	var today = new Date();
+	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		
+	
 	if (name&&number&&address&&district&&qty&&deliveryMethod){
 		
 		//save data to database
-		saveData(name,address,district,number,size,color,qty,deliveryMethod);
+		saveData(name,address,district,number,size,color,qty,deliveryMethod,date);
 		form.reset();
 		closeB.click();
 		//show alert
@@ -88,7 +94,7 @@ form.addEventListener('submit', (e) =>{
 })
 
 //save user data to firebase
-function saveData(name,address,district,number,size,color,qty,deliveryMethod){
+function saveData(name,address,district,number,size,color,qty,deliveryMethod,date){
 	var newUserRef= userRef.push();
 	newUserRef.set({
 		Name:name,
@@ -98,14 +104,9 @@ function saveData(name,address,district,number,size,color,qty,deliveryMethod){
 		Size: size,
 		Color: color,
 		Quantity: qty,
-		Delivery: deliveryMethod
+		Delivery: deliveryMethod,
+		Date: date
 
 	});
 }
 
-var userData=firebase.database().ref('Users')
-userData.on('value',gotData);
-
-function gotData(data){
-	console.log(data.val());
-}
