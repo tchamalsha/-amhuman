@@ -52,6 +52,9 @@ var firebaseConfig = {
 var userRef = firebase.database().ref('Users');
 
 let form=document.querySelector("#customer-details");
+let alertB=document.getElementById('alertButton');
+let closeB=document.getElementById('closeButton');
+let errorB=document.getElementById('alertButtonError');
 //form deatils
 form.addEventListener('submit', (e) =>{
 	e.preventDefault();
@@ -64,10 +67,23 @@ form.addEventListener('submit', (e) =>{
 	let address = form.inputAddress.value
 	let district = form.inputDistrict.value
 	let number = form.inputNumber.value
-	
-	//save data to database
-	saveData(name,address,district,number,size,color,qty,deliveryMethod);
 
+	if (name&&number&&address&&district&&qty&&deliveryMethod){
+		
+		//save data to database
+		saveData(name,address,district,number,size,color,qty,deliveryMethod);
+		form.reset();
+		closeB.click();
+		//show alert
+		alertB.click();
+	}
+	else{
+		form.reset();
+		closeB.click();
+		errorB.click();
+
+	}
+	
 	
 })
 
@@ -85,4 +101,11 @@ function saveData(name,address,district,number,size,color,qty,deliveryMethod){
 		Delivery: deliveryMethod
 
 	});
+}
+
+var userData=firebase.database().ref('Users')
+userData.on('value',gotData);
+
+function gotData(data){
+	console.log(data.val());
 }
