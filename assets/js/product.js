@@ -26,16 +26,16 @@ let buttonWhite = document.getElementById('whiteButton')
 let buttonRed = document.getElementById('redButton')
 let radioBlack = document.getElementById('radioB')
 let radioWhite = document.getElementById('radioW')
-let radioRed = document.getElementById('radioR')
+//let radioRed = document.getElementById('radioR')
 buttonBlack.addEventListener('click',(e)=>{
 	radioBlack.click()
 })
 buttonWhite.addEventListener('click',(e)=>{
 	radioWhite.click()
 })
-buttonRed.addEventListener('click',(e)=>{
-	radioRed.click()
-})
+// buttonRed.addEventListener('click',(e)=>{
+// 	radioRed.click()
+// })
 
 var firebaseConfig = {
     apiKey: "AIzaSyBLvvP974M8UrV0bg7xIiqIVOOG6EHJUlQ",
