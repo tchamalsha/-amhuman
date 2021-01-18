@@ -23,7 +23,7 @@ buttonXL.addEventListener('click',(e)=>{
 //color selection
 let buttonBlack = document.getElementById('blackButton')
 let buttonWhite = document.getElementById('whiteButton')
-//let buttonRed = document.getElementById('redButton')
+let buttonRed = document.getElementById('redButton')
 let radioBlack = document.getElementById('radioB')
 let radioWhite = document.getElementById('radioW')
 //let radioRed = document.getElementById('radioR')
@@ -70,9 +70,9 @@ form.addEventListener('submit', (e) =>{
 	let number = form.inputNumber.value
 
 	//get date
-	var today = new Date();
-	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-		
+	let today = new Date();
+	let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	console.log(date);
 	
 	if (name&&number&&address&&district&&qty&&deliveryMethod){
 		
