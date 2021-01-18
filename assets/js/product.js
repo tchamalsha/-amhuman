@@ -23,7 +23,7 @@ buttonXL.addEventListener('click',(e)=>{
 //color selection
 let buttonBlack = document.getElementById('blackButton')
 let buttonWhite = document.getElementById('whiteButton')
-let buttonRed = document.getElementById('redButton')
+//let buttonRed = document.getElementById('redButton')
 let radioBlack = document.getElementById('radioB')
 let radioWhite = document.getElementById('radioW')
 //let radioRed = document.getElementById('radioR')
