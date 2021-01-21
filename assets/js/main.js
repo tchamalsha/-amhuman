@@ -4,6 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 !(function($) {
   "use strict";
 
@@ -176,3 +177,67 @@
   });
 
 })(jQuery);
+var firebaseConfig = {
+  apiKey: "AIzaSyBLvvP974M8UrV0bg7xIiqIVOOG6EHJUlQ",
+  authDomain: "amhuman-98902.firebaseapp.com",
+  databaseURL: "https://amhuman-98902-default-rtdb.firebaseio.com",
+  projectId: "amhuman-98902",
+  storageBucket: "amhuman-98902.appspot.com",
+  messagingSenderId: "545915893567",
+  appId: "1:545915893567:web:9b08c7b9e515828763058a"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+var qtaRef = firebase.database().ref('Quatations');
+
+let form=document.querySelector("#quatationDetails");
+let alertB=document.getElementById('alertButton');
+let closeB=document.getElementById('closeButton');
+//form deatils
+form.addEventListener('submit', (e) =>{
+	e.preventDefault();
+	
+
+	let qty=form.inputQty.value
+	let name = form.inputName.value
+	let product = form.inputProduct.value
+	let expectedDate= form.inputDate.value
+  let number = form.inputNumber.value
+  let email=form.inputEmail.value
+
+	//get date
+	let today = new Date();
+	let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+	if (name&&number&&product&&expectedDate&&qty){
+		
+		//save data to database
+		saveData(name,product,number,expectedDate,email,date);
+		form.reset();
+		closeB.click();
+		//show alert
+		alertB.click();
+	}
+	else{
+		form.reset();
+		closeB.click();
+
+
+	}
+	
+})
+//save user data to firebase
+function saveData(name,product,number,expectedDate,email,date){
+	var newQtaRef= qtaRef.push();
+	newQtaRef.set({
+		Name:name,
+    Product:product,
+    Email:email,
+    Contact:number,
+    ExpectedDate:expectedDate,
+    Date:date
+
+	});
+}
