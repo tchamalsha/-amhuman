@@ -198,8 +198,6 @@ let closeB=document.getElementById('closeButton');
 //form deatils
 form.addEventListener('submit', (e) =>{
 	e.preventDefault();
-	
-
 	let qty=form.inputQty.value
 	let name = form.inputName.value
 	let product = form.inputProduct.value
@@ -211,10 +209,10 @@ form.addEventListener('submit', (e) =>{
 	let today = new Date();
 	let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
-	if (name&&number&&product&&expectedDate&&qty){
+	if (name&&number&&product&&expectedDate&&qty&&email){
 		
 		//save data to database
-		saveData(name,product,number,expectedDate,email,date);
+		saveData(name,product,number,expectedDate,email,date,qty);
 		form.reset();
 		closeB.click();
 		//show alert
@@ -223,21 +221,21 @@ form.addEventListener('submit', (e) =>{
 	else{
 		form.reset();
 		closeB.click();
-
-
 	}
 	
 })
 //save user data to firebase
-function saveData(name,product,number,expectedDate,email,date){
+function saveData(name,product,number,expectedDate,email,date,qty){
 	var newQtaRef= qtaRef.push();
 	newQtaRef.set({
+    
 		Name:name,
     Product:product,
     Email:email,
     Contact:number,
     ExpectedDate:expectedDate,
-    Date:date
+    Date:date,
+    Qty: qty
 
 	});
 }
