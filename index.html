@@ -38,6 +38,31 @@
 
 <body>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBLvvP974M8UrV0bg7xIiqIVOOG6EHJUlQ",
+    authDomain: "amhuman-98902.firebaseapp.com",
+    databaseURL: "https://amhuman-98902-default-rtdb.firebaseio.com",
+    projectId: "amhuman-98902",
+    storageBucket: "amhuman-98902.appspot.com",
+    messagingSenderId: "545915893567",
+    appId: "1:545915893567:web:9b08c7b9e515828763058a",
+    measurementId: "G-P5PSX8QBCH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
   <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
